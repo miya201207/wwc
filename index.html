@@ -1,0 +1,950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style>
+body,ul,li,p,h1,h3{margin:0;padding:0;font-family:'Microsoft YaHei';}
+body{ background-color:#fff;}
+ul,li{list-style:none;}
+em { font-style: normal;}
+img{border:none; display:block;}
+a{ text-decoration:none; color:#000;}
+a:hover {text-decoration: underline;}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfix{ *zoom:1;}
+
+/*	tou  bu	*/
+.section{ margin:0 auto; width:1200px; position:relative; z-index:2;}
+.telec-head-map,.telec-head-wei{ float:left; font-size:14px;}
+.telec-head-map span,.telec-head-wei span{ float:left; display:block; height:40px; line-height:40px; cursor:pointer;}
+.telec-head-map span{ margin-left:10px;}
+.telec-head-map i,.telec-head-wei i{ display:block; width:6px; height:12px; float:left; background:url(images/ico.png) 0 0 no-repeat; margin:14px 0 0 9px;}
+.telec-head-wei span{ margin-left:32px;}
+.map-dop{ width:1200px; height:125px; position:absolute; left:0; top:40px; background:#333; opacity:.95; display:none;}
+.map-dop h3{ font-size:18px; line-height:20px; margin-top:20px; margin-bottom:6px;}
+.map-dop h3.h-1{ color:#ff0000;}
+.map-dop h3.h-2{ color:#ffcc00;}
+.map-dop h3.h-3{ color:#33ccff;}
+.map-dop .dop{ float:left;}
+.map-dop em{ width:28px; height:9px; position:absolute; top:-8px; left:24px; background:url(images/ico.png) -50px 0 no-repeat; }
+.map-dop.part1 em{ left:130px;}
+.telec-head-map:hover i,.telec-head-wei:hover i{ background:none;}
+.telec-head-map:hover .map-dop,.telec-head-wei:hover .map-dop{ display:block;}
+.map-dop.on{ display:block;}
+.dop-part{ font-size:14px;    margin-left: 82px;}
+.dop-part a{ color:#fff; display:block; margin-top:13px;}
+.dop-part .dp{ float:left; width:33px; height:33px; background:url(images/ico.png) -150px -50px no-repeat;}
+.dop-part .dp.dp2{ background-position:-200px -50px;}
+.dop-part .p2{ float:left; line-height:33px; margin-left:13px;}
+.map-dop li{ float:left; font-size:14px; line-height:24px;}
+.map-dop li a{ color:#fff;}
+.dop-1{ width:660px; overflow:hidden; margin-left: 10px;}
+.dop-1 li{ width:94px;}
+.dop-2{ width:250px;}
+.dop-2 li,.dop-3 li{ margin-right:26px;}
+.dop-2 li.last,.dop-3 li.last{ margin-right:0;}
+.dop-3{ width:170px;}
+.telec-head-login{ float:left; color:#fff; font-size:14px; line-height:40px; text-align:center; background-color:#fff; margin-left:416px;}
+.telec-head-login .denglu,.telec-head-login .zhuce{ width:62px; height:40px; background: 0 0 no-repeat; float:left; display:block; color:#fff; text-decoration:none;}
+.telec-head-login .denglu{ background-image:url(images/login1.png);}
+.telec-head-login .zhuce{ background-image:url(images/zhuce.png);}
+.txQQ,.xlWeiBo{ float:left; width:56px; height:40px; display:block; background-color:#eee;}
+.xlWeiBo{ margin-left:1px;}
+.qq-ico,.wb-ico{ background:url(images/ico.png) 0 0 no-repeat; height:28px;}
+.qq-ico{ background-position:-100px 0px; margin:6px auto 0; width:28px;}
+.qq-ico:hover{ background-position:-150px 0px;}
+.wb-ico{ background-position:-200px 0px; margin:9px auto 0; width:35px;}
+.wb-ico:hover{ background-position:-250px 0px;}
+.telec-head-coll{ float:left; font-size:14px; color:#333; line-height:40px; margin-left:30px;}
+.telec-head-coll div{ float:left;}
+.telec-head-coll i{ width:18px; height:18px; background:url(images/ico.png) 0 -50px no-repeat; display:block; float:left; margin-top:11px; margin-left:7px;}
+.telec-head-coll i.on{ background-position:-50px -50px;}
+.telec-head-sousuo{ float:right; position:relative;}
+.head-inp{ width:180px; height:26px; border:1px solid #656565; outline:none; border-radius:10px; margin-top: 7px; color:#999; padding:0 20px;}
+.head-btn{ position:absolute; width:20px; height:19px; top:11px; right:6px; background:url(images/ico.png) -100px -50px no-repeat; cursor:pointer;}
+
+
+/*	banner	*/
+.Col-part1{ height:140px; margin-bottom:40px;}
+.Col-part1-a{ height:60px; background-color:#666;}
+.Col-part1-a-mod1{ width:1200px; margin:0 auto; height:60px; position:relative;}
+.Col-logo{ width:120px; height:98px; position:absolute; left:0; top:0;}
+.Col-part1-a-mod1-nav{ float:right;}
+.Col-part1-a-mod1-nav li{ float:left; font-size:24px; margin-left:28px;}
+.Col-part1-a-mod1-nav li.on{ background-color:#e73262;}
+.Col-part1-a-mod1-nav li a{ color:#fff; line-height:60px; padding:0 18px;}
+.Col-part1-a-mod2{ width:1440px; height:80px; background:url(images/banner1.jpg) 50% 0 no-repeat; margin:0 auto; border-bottom:2px solid #dcdcdc;}
+.Col-part1-a-mod2 ul{ padding-top:27px;}
+.Col-part1-a-mod2 li{ float:left; text-align:center; line-height:18px; position:relative; margin-left:98px;}
+.Col-part1-a-mod2 li.first{ margin-left:120px;}
+.Col-part1-a-mod2 li.on a{ color:#e73262;}
+.Col-part1-a-mod2 li.on i{ color:#e73262; background-position:-24px 0;}
+.Col-part1-a-mod2 li a{ color:#343434; font-size:14px;}
+.Col-part1-a-mod2 li i{ display:block; width:24px; height:24px; background:url(images/timer.png) 0 0 no-repeat; position:absolute; left:50%; margin-left:-12px; top:42px;}
+.Col-part1-a-mod2-mid{ width:1200px; margin:0 auto;}
+
+/**/
+.con{ width:1200px; margin:0 auto 40px;;}
+.Col-part2-left{ width:800px; height:500px; float:left; overflow:hidden; position:relative;}
+.Col-part2-left ul{ position:absolute; left:0; top:0; width:9000px;}
+.Col-part2-left ul li{ float:left; width:800px; height:500px; overflow:hidden;}
+.Col-part2-left ul li img{width:800px; height:500px;}
+.prevBtn,.nextBtn{ display:block; width:50px; height:80px; position:absolute; top:213px; z-index:5; cursor:pointer; opacity:0.4;}
+.prevBtn:hover,.nextBtn:hover{ opacity:0.8;}
+.prevBtn{ left:40px; background:url(images/zuo.png) 50% 20px no-repeat #717171;}
+.nextBtn{ right:40px; background:url(images/you.png) 50% 20px no-repeat #717171;}
+.Col-part2-right{ float:right;}
+.Col-part2-right-list{ width:390px; height:245px; overflow:hidden;}
+.Col-part2-right-list.first{ margin-bottom:10px;}
+.Col-part2-right-list img{ width:390px; height:245px;}
+
+
+/**/
+.Col-part3-left{ width:800px; float:left;}
+.part3-left-mod1-phone{ float:left; width:70px; height:72px; background-color:#e73262; color:#fff; text-align:center; font-size:24px;line-height: 30px; padding-top: 8px;}
+.part3-left-mod1-list{ width:720px; float:right;}
+.part3-left-mid{ width:640px; float:left; margin-left:10px; overflow:hidden;}
+.part3-left-mid ul{ width:3000px;}
+.part3-left-mid li{ float:left; margin-right:10px;}
+.part3-left-mid li img{ width:120px; height:80px;}
+.part3-prevBtn,.part3-nextBtn{ width:30px; height:80px; opacity:0.4; cursor:pointer;}
+.part3-prevBtn:hover,.part3-nextBtn:hover{ opacity:1;}
+.part3-prevBtn{ background:url(images/zuo.png) 50% 20px no-repeat #b8b9b6; float:left;}
+.part3-nextBtn{ background:url(images/you.png) 50% 20px no-repeat #b8b9b6; float:right;}
+.part3-left-mod2 li{ margin-top:20px;}
+.part3-left-mod2 li{ float:left; width:260px; background-color:#eee; margin-left:10px;}
+.part3-left-mod2 li.first{ margin-left:0;}
+.part3-left-img img{ width:260px; height:200px;}
+.part3-left-text{ padding:0 10px 30px;}
+.part3-left-title{ font-weight:bold; color:#333; font-size:14px; line-height:16px; margin-top:19px; display:block; margin-bottom:8px;}
+.part3-left-text p{ color:#333; font-size:12px; line-height:18px; min-height:54px;}
+.part3-left-mod3-l{ float: left; width: 68px; height: 80px; background-color: #e73262;}
+.part3-left-mod3-l img{ margin:14px auto 0;}
+.part3-left-mod3-m{ display:block; width:210px; height:80px; float:left; margin-left:10px; position:relative;}
+.part3-left-mod3-m div{ position:absolute; width:210px; height:80px; background:url(images/dian.png); left:0; top:0; font-size:24px; color:#fff; text-align:center; line-height:80px;}
+.part3-left-mod3-m img{ width:210px; height:80px;}
+.part3-left-mod3{ margin-top:40px;}
+.part3-left-mod3-all{ float:right; width: 62px; height: 80px; background-color: #e73262; color: #fff; text-align: center; font-size: 24px;  line-height:80px;}
+.part3-left-pl{ font-size:12px; margin-bottom:13px;}
+.pl-bianji{ float:left; color:#595757; line-height:14px; padding-left:10px; background:url(images/dian-1.png) 0 4px no-repeat; margin-left:10px;}
+.pl-chakan{ float:left; padding-left:26px; background:url(images/chakan.png) 0 1px no-repeat; margin-left:84px;}
+.pl-liuyan{ padding-left:20px; background:url(images/pl.png) 0 3px no-repeat; float:right; margin-right:20px;}
+.Col-part3-left-h3{ margin-top:40px;}
+.Col-part3-left-h3 h3{ color:#717171; font-size:24px; line-height:26px;}
+.part3-left-mod4-img{ float:left;}
+.part3-left-mod4-img img{ width:300px; height:200px;}
+.part3-left-mod4-text{ float:left; width:458px; background-color:#eee; height:200px; padding:0 20px;}
+.part3-left-mod4-text a{ display:block; font-size:18px; color:#000; margin-top:16px;}
+.part3-left-mod4-text p{ color:#999; font-size:12px;}
+.part3-left-mod4-char{ font-size:14px; color:#333; line-height:22px; margin-top:10px;}
+.part3-left-mod4 li{ float:left; margin-top:20px;}
+.Col-more{ height:40px; text-align:center; line-height:40px; color:#666; background-color:#eee; margin-top:20px; cursor:pointer;}
+.Col-part3-right{ width:390px; float:right;}
+.Col-part3-right-mod1 li{ height:100px; background-color:#eee; color:#333;}
+.Col-part3-right-mod1 li.hong{ border-right:5px solid #e73262;}
+.Col-part3-right-mod1 li.hong:hover{ background-color:#e73262; color:#fff;}
+.Col-part3-right-mod1 li.hong:hover .pcbt-title,.Col-part3-right-mod1 li.hong:hover .pc,.Col-part3-right-mod1 li.hui:hover .pcbt-title,.Col-part3-right-mod1 li.hui:hover .pc{ color:#fff;}
+.Col-part3-right-mod1 li.hui{ border-right:5px solid #666;}
+.Col-part3-right-mod1 li.hui:hover{ background-color:#666; color:#fff;}
+.Col-part3-right-mod1 li.hui:hover .pcbt-title{ color:#fff;}
+
+.Col-part3-right-mod1 li .pc{ float:left; height:62px; margin-top:10px; width:47px; text-align:center; color:#e73262; font-weight:bold; padding-top:18px; border-right:1px solid #c9c9c9;}
+.pcbt{ float:left; width:302px; margin-left:17px;}
+.pcbt-title{ font-size:14px; color:#333; line-height:16px; margin-top:10px; display:block; font-weight:bold;}
+.pcbt p{ font-size:12px; line-height:18px;}
+.Col-part3-right-mod2{ margin-top:20px;}
+.Col-part3-right-mod2 img{ width:390px; height:195px;}
+.Col-part3-right-mod3{ margin-top:20px; background-color:#eee;}
+.Col-part3-right-mod3 h3{ height:53px; border-bottom:2px solid #ff3366; color:#ff3366; font-size:24px; background:url(images/huo.png) 57px 10px no-repeat; text-align:center; line-height:60px; width:373px; margin:0 auto;}
+.Col-part3-right-mod3 ul{ padding:0 10px 20px;}
+.Col-part3-right-mod3 li{ float:left; margin-top:16px;}
+.Col-part3-mod3-r{ float:left;}
+.Col-part3-mod3-r img{ width:148px; height:93px;}
+.Col-part3-mod3-l{ display:block; width:20px; height:18px; text-align:center; line-height:18px; background-color:#666; color:#fff; float:left;}
+.Col-part3-mod3-l.n1{ background-color:#ff3366;}
+.Col-part3-mod3-m{ float:left; width:185px; margin-left:8px;}
+.Col-part3-mod3-m a{ color:#333; font-size:14px; line-height:18px;}
+.Col-part3-mod3-m p{ color:#666; font-size:12px; line-height:18px;}
+.Col-part4 img{ width:148px; height:73px;}
+.part3-left-img{ width:260px; height:200px; display:block; overflow:hidden;}
+.blow img:hover { transform: scaleX(1.05) scaleY(1.05); -webkit-transform: scaleX(1.05) scaleY(1.05);}
+.blow img { transition: 1s; -webkit-transition: 1s;}
+
+</style> 
+</head>
+
+<body>
+	<!--	head	-->
+	<div class="section clearfix">
+    	<div class="">
+            <div class="telec-head-map">
+                <span>网站地图</span>
+                <i></i>
+                <div class="map-dop">
+                    <em class="ico"></em>
+                    <div class="dop dop-1">
+                        <h3 class="h-1">资讯频道</h3>
+                        <div class="">
+                            <ul class="clearfix">
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dop dop-2">
+                        <h3 class="h-2">资讯频道</h3>
+                        <div class="">
+                            <ul class="clearfix">
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li class="last"><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li class="last"><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dop dop-3">
+                        <h3 class="h-3">资讯频道</h3>
+                        <div class="">
+                            <ul class="clearfix">
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li class="last"><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li><a href="#" title="" target="_blank">电视频道</a></li>
+                                <li class="last"><a href="#" title="" target="_blank">电视频道</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="telec-head-wei">
+                <span>微博微信</span>
+                <i></i>
+                <div class="map-dop part1">
+                    <em></em>
+                    <div class="dop-part">
+                        <a href="#" target="_blank" class="clearfix">
+                            <div class="dp dp1"></div>
+                            <div class="p2">关注微博</div>
+                        </a>
+                        <a href="#" target="_blank" class="clearfix">
+                            <div class="dp dp2"></div>
+                            <div class="p2">加微信</div>
+                        </a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="telec-head-login clearfix">
+                <a href="#" class="denglu">登录</a>
+                <a href="#" class="txQQ"><div class="qq-ico"></div></a>
+                <a href="#" class="xlWeiBo"><div class="wb-ico"></div></a>
+                <a href="#" class="zhuce">注册</a>
+            </div>
+            
+            <a href="#" class="telec-head-coll">
+                <div>加入收藏</div>
+                <i></i>
+            </a>
+            <div class="telec-head-sousuo">
+                <input type="text" class="head-inp" value="创维电视、乐视、小米" />
+                <div class="head-btn"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--	banner	-->
+    <div class="Col-part1">
+    	<div class="Col-part1-a">
+        	<div class="Col-part1-a-mod1 clearfix">
+            	<div class="Col-logo">
+                	<a href="#" title="" target="_blank"><img src="images/logo1.png" alt="" /></a>
+                </div>
+                <div class="Col-part1-a-mod1-nav">
+                	<ul class="clearfix">
+                    	<li class="on"><a href="#" title="">首页</a></li>
+                        <li><a href="#" title="">手机</a></li>
+                        <li><a href="#" title="">智能馆</a></li>
+                        <li><a href="#" title="">试用</a></li>
+                        <li><a href="#" title="">发现</a></li>
+                        <li><a href="#" title="">更多</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="Col-part1-a-mod2">
+            	<div class="Col-part1-a-mod2-mid" >
+                	<ul class="clearfix">
+                        <li class="first on">
+                            <a href="#" title="" target="_blank">
+
+                                2015.5.13<br />
+                                魅族新品发布会
+                            </a>
+                            <i></i>
+                        </li>
+                        <li>
+                            <a href="#" title="" target="_blank">
+                                2015.5.13<br />
+                                魅族新品发布会
+                            </a>
+                            <i></i>
+                        </li>
+                        <li>
+                            <a href="#" title="" target="_blank">
+                                2015.5.13<br />
+                                魅族新品发布会
+                            </a>
+                            <i></i>
+                        </li>
+                        <li>
+                            <a href="#" title="" target="_blank">
+                                2015.5.13<br />
+                                魅族新品发布会
+                            </a>
+                            <i></i>
+                        </li>
+                        <li>
+                            <a href="#" title="" target="_blank">
+                                2015.5.13<br />
+                                魅族新品发布会
+                            </a>
+                            <i></i>
+                        </li>
+                        <li>
+                            <a href="#" title="" target="_blank">
+                                2015.5.13<br />
+                                魅族新品发布会
+                            </a>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            	
+            </div>
+        </div>
+    </div>
+    
+    <!--	zuo you  lun bo	-->
+    <div class="con clearfix blow">
+    	<div class="Col-part2-left">
+        	<span class="prevBtn"></span>
+            <span class="nextBtn"></span>
+        	<ul class="clearfix">
+            	<li>
+                	<a href="#" title="" target="_blank">
+                    	<img src="images/1.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<a href="#" title="" target="_blank">
+                    	<img src="images/1.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<a href="#" title="" target="_blank">
+                    	<img src="images/1.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<a href="#" title="" target="_blank">
+                    	<img src="images/1.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                	<a href="#" title="" target="_blank">
+                    	<img src="images/1.jpg" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="Col-part2-right">
+        	<div class="Col-part2-right-list first">
+            	<a href="#" title="" target="_blank">
+                	<img src="images/1.jpg" alt="" />
+                </a>
+            </div>
+            <div class="Col-part2-right-list">
+            	<a href="#" title="" target="_blank">
+                	<img src="images/1.jpg" alt="" />
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--	zi xun shou ji	-->
+    <div class="con clearfix">
+    	<div class="Col-part3-left">
+        	<div class="part3-left-mod1 clearfix">
+            	<div class="part3-left-mod1-phone">
+                	手机资讯
+                </div>
+                <div class="part3-left-mod1-list">
+                	<span class="part3-prevBtn"></span>
+                                        
+                	<div class="part3-left-mid">
+                    	<ul class="clearfix">
+                        	<li>
+                            	<a href="#" title="" target="_blank">
+                                	<img src="images/1.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#" title="" target="_blank">
+                                	<img src="images/1.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#" title="" target="_blank">
+                                	<img src="images/1.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#" title="" target="_blank">
+                                	<img src="images/1.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#" title="" target="_blank">
+                                	<img src="images/1.jpg" alt="" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <span class="part3-nextBtn"></span>
+                </div>
+            </div>
+            
+            <div class="part3-left-mod2 clearfix blow">
+            	<ul class="clearfix">
+                	<li class="first">
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        
+                    </li>
+                    <li>
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        
+                    </li>
+                    <li>
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="part3-left-mod3 clearfix">
+            	<div class="part3-left-mod3-l">
+                	<img src="images/zhineng.png" alt="" />
+                </div>
+                <a class="part3-left-mod3-m" href="#" title="" target="_blank">
+                	<img src="images/1.jpg" alt="" />
+                    <div class="">
+                    	智能穿戴
+                    </div>
+                </a>
+                <a class="part3-left-mod3-m" href="#" title="" target="_blank">
+                	<img src="images/1.jpg" alt="" />
+                    <div class="">
+                    	智能穿戴
+                    </div>
+                </a>
+                <a class="part3-left-mod3-m" href="#" title="" target="_blank">
+                	<img src="images/1.jpg" alt="" />
+                    <div class="">
+                    	智能穿戴
+                    </div>
+                </a>
+                <a href="#" title="" target="_blank" class="part3-left-mod3-all">
+                	全部
+                </a>
+            </div>
+            
+            <div class="part3-left-mod2 clearfix blow">
+            	<ul class="clearfix">
+                	<li class="first">
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        <div class="part3-left-pl clearfix">
+                        	<div class="pl-bianji">万维编辑</div>
+                            <div class="pl-chakan">201</div>
+                            <div class="pl-liuyan">89</div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        <div class="part3-left-pl clearfix">
+                        	<div class="pl-bianji">万维编辑</div>
+                            <div class="pl-chakan">201</div>
+                            <div class="pl-liuyan">89</div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        <div class="part3-left-pl clearfix">
+                        	<div class="pl-bianji">万维编辑</div>
+                            <div class="pl-chakan">201</div>
+                            <div class="pl-liuyan">89</div>
+                        </div>
+                        
+                    </li>
+                    <li class="first">
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        <div class="part3-left-pl clearfix">
+                        	<div class="pl-bianji">万维编辑</div>
+                            <div class="pl-chakan">201</div>
+                            <div class="pl-liuyan">89</div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        <div class="part3-left-pl clearfix">
+                        	<div class="pl-bianji">万维编辑</div>
+                            <div class="pl-chakan">201</div>
+                            <div class="pl-liuyan">89</div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                    	<a class="part3-left-img" href="#" title="" target="_blank">
+                        	<img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="part3-left-text">
+                        	<a class="part3-left-title" href="#" title="" target="_blank">
+                                呵呵呵呵呵 
+                            </a>
+                            <p>
+                                呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵 
+                            </p>
+                        </div>
+                        <div class="part3-left-pl clearfix">
+                        	<div class="pl-bianji">万维编辑</div>
+                            <div class="pl-chakan">201</div>
+                            <div class="pl-liuyan">89</div>
+                        </div>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div class="Col-part3-left-h3">
+            	<h3>大家都在看</h3>
+            </div>
+            
+            <div class="part3-left-mod4">
+            	<ul class="clearfix">
+                	<li>
+                    	<div class="part3-left-mod4-img">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="part3-left-mod4-text">
+                        	<a href="#" title="" target="_blank">呵呵呵呵呵呵呵</a>
+                            <p>2015-11-20&nbsp;&nbsp;10:04:55</p>
+                            <div class="part3-left-mod4-char">
+     呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵                       	呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="part3-left-mod4-img">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="part3-left-mod4-text">
+                        	<a href="#" title="" target="_blank">呵呵呵呵呵呵呵</a>
+                            <p>2015-11-20&nbsp;&nbsp;10:04:55</p>
+                            <div class="part3-left-mod4-char">
+     呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵                       	呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="part3-left-mod4-img">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="part3-left-mod4-text">
+                        	<a href="#" title="" target="_blank">呵呵呵呵呵呵呵</a>
+                            <p>2015-11-20&nbsp;&nbsp;10:04:55</p>
+                            <div class="part3-left-mod4-char">
+     呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵                       	呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="part3-left-mod4-img">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="part3-left-mod4-text">
+                        	<a href="#" title="" target="_blank">呵呵呵呵呵呵呵</a>
+                            <p>2015-11-20&nbsp;&nbsp;10:04:55</p>
+                            <div class="part3-left-mod4-char">
+     呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵                       	呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="Col-more">
+            	查看更多
+            </div>
+        </div>
+        
+        <div class="Col-part3-right">
+        	<div class="Col-part3-right-mod1">
+            	<ul class="clearfix">
+                	<li class="hong">
+                    	<div class="pc">评<br />测</div>
+                        <div class="pcbt">
+                        	<a href="#" class="pcbt-title" title="" target="_blank">标题标题标题标题</a>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </li>
+                    <li class="hui">
+                    	<div class="pc">评<br />测</div>
+                        <div class="pcbt">
+                        	<a href="#" class="pcbt-title" title="" target="_blank">标题标题标题标题</a>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </li>
+                    <li class="hong">
+                    	<div class="pc">评<br />测</div>
+                        <div class="pcbt">
+                        	<a href="#" class="pcbt-title" title="" target="_blank">标题标题标题标题</a>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </li>
+                    <li class="hui">
+                    	<div class="pc">评<br />测</div>
+                        <div class="pcbt">
+                        	<a href="#" class="pcbt-title" title="" target="_blank">标题标题标题标题</a>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </li>
+                    <li class="hong">
+                    	<div class="pc">评<br />测</div>
+                        <div class="pcbt">
+                        	<a href="#" class="pcbt-title" title="" target="_blank">标题标题标题标题</a>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </li>
+                    <li class="hui">
+                    	<div class="pc">评<br />测</div>
+                        <div class="pcbt">
+                        	<a href="#" class="pcbt-title" title="" target="_blank">标题标题标题标题</a>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="Col-part3-right-mod2">
+            	<a href="#" title="" target="_blank">
+                	<img src="images/1.jpg" alt="" />
+                </a>
+            </div>
+            
+            <div class="Col-part3-right-mod3">
+            	<h3>
+                	热门智能设备排行
+                </h3>
+                <ul class="clearfix">
+                	<li>
+                    	<span class="Col-part3-mod3-l n1">1</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l n1">2</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l n1">3</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">4</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">5</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">6</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">7</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">8</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">9</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                    	<span class="Col-part3-mod3-l">10</span>
+                        <div class="Col-part3-mod3-m">
+                        	<a href="#" title="" target="_blank">
+                            	标题标题标题标题标题
+                            </a>
+                            <p>内容内容内容内容内容内容内容内容</p>
+                        </div>
+                        <div class="Col-part3-mod3-r">
+                        	<a href="#" title="" target="_blank">
+                            	<img src="images/1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+	
+
+		var prevBtn = $('.prevBtn');
+		var nextBtn = $('.nextBtn');
+		var solid = $('.Col-part2-left ul');
+		var solidLen = $('.Col-part2-left ul li').length;
+		var num1 = 0;
+		
+		prevBtn.click(function(){
+			num1 --;
+			if( num1 < 0 ){
+				num1 = solidLen-1;
+			}
+			solidFn();
+		});
+		
+		nextBtn.click(function(){
+			num1 ++;
+			if( num1 >= solidLen ){
+				num1 = 0;
+			}
+			solidFn();
+		});
+		
+		function solidFn(){
+			solid.animate({
+				left : -800 * num1
+			});
+		}
+
+        //直击发布会
+        $('.Col-part1-a-mod2 li').on('mouseover',function(){
+
+
+           console.log($('.Col-part1-a-mod2').css('background')) ;
+
+        })
+
+    </script>
+    
+</body>
+</html>
